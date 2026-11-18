@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom scrollbar hide */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* Custom checkbox styling */
+input[type="checkbox"] {
+  accent-color: #ec4899;
+}
+
+/* Selection color */
+::selection {
+  background-color: #fbcfe8;
+  color: #831843;
+}
+
+.dark ::selection {
+  background-color: #831863;
+  color: #fce7f3;
+}
